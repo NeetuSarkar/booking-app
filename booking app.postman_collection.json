@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "4d2d256e-7aa8-4f85-b1cb-3674f6f62b08",
+		"name": "booking app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31823677"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Neetu Sarkar\",\r\n  \"email\": \"neetusarkar@gmail.com\",\r\n  \"phone\": \"07370\",\r\n  \"password\": \"Neetu@202\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://booking-app-dsfg.onrender.com/api/auth/register",
+							"protocol": "https",
+							"host": [
+								"booking-app-dsfg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"neetusarkar@gmail.com\",\r\n    \"password\":\"Neetu@202\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://booking-app-dsfg.onrender.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"booking-app-dsfg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create-Activity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"garba nights\",\r\n  \"description\": \"Dusshera garaba nights\",\r\n  \"location\": \"DNK Ground\",\r\n  \"date\": \"2025-10-10T17:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://booking-app-dsfg.onrender.com/api/activities/create",
+					"protocol": "https",
+					"host": [
+						"booking-app-dsfg",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"activities",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Activites",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://booking-app-dsfg.onrender.com/api/activities/",
+					"protocol": "https",
+					"host": [
+						"booking-app-dsfg",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"activities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my bookings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "book an activity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFiNzQ5NTdlZjBjMjcxNjM3NjNkYjMiLCJpYXQiOjE3NDY2Mjk3ODYsImV4cCI6MTc0NjY2NTc4Nn0.zQhhjxSkmvZJ4yTyuUf05XNmXNn_2AuYJNBeIT3EhKA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"activityId\": \"681b88be9c8e22308c2c5493\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://booking-app-dsfg.onrender.com/api/bookings/book",
+					"protocol": "https",
+					"host": [
+						"booking-app-dsfg",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"bookings",
+						"book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
